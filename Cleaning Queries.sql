@@ -1,8 +1,8 @@
 /*Cleaning data LOG - 
-		1)Deleting Null values in the Primary Key - ride_ID (10 Rows) 
-    2)Remove headers resulting from compilation (12 Rows)
-    3)DROPPING Columns - Start and End lattitude and Longitude - because Irrelavent
-    5)DELETED data where start time was greater than the end time		
+	1)Deleting Null values in the Primary Key - ride_ID (10 Rows) 
+    	2)Remove headers resulting from compilation (12 Rows)
+    	3)DROPPING Columns - Start and End lattitude and Longitude - because Irrelavent
+    	5)DELETED data where start time was greater than the end time		
 */
 ### Delete Queries 
 
