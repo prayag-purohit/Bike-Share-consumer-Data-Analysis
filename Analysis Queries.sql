@@ -6,6 +6,7 @@ FROM
 	prayag.combined_data
 GROUP BY 
 	member_casual;
+
 #2 Average duration of rides by member type 
 SELECT 
 	member_casual, 
