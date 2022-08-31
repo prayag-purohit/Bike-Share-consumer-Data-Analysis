@@ -28,14 +28,14 @@ WHERE
 SELECT DISTINCT 
 	member_casual 
 FROM 
-	prayag.combined_data;
+	bike_data.combined_data;
 -- Two types of members - Ok
 
 #2 Date Range
 SELECT DISTINCT 
 	Extract(YEAR_MONTH from started_at) 
 FROM 
-	prayag.combined_data;
+	bike_data.combined_data;
 -- Data range - 2021 (Jan to Dec) - Ok
 
 #3 start station count
@@ -43,7 +43,7 @@ SELECT
 	count(DISTINCT start_station_id),
 	TRIM(start_station_name)
 FROM 
-	prayag.combined_data
+	bike_data.combined_data
 WHERE start_station_id <> '' AND start_station_name <> ''
 ORDER by 
 	start_station_name;
@@ -53,7 +53,7 @@ SELECT
 	count(DISTINCT end_station_id),
 	TRIM(end_station_name)
 FROM 
-	prayag.combined_data
+	bike_data.combined_data
 WHERE end_station_id <> '' AND end_station_name <> ''
 ORDER by 
 	start_station_name;
@@ -63,13 +63,13 @@ ORDER by
 SELECT distinct
 	rideable_type
 FROM 
-	prayag.combined_data;
+	bike_data.combined_data;
 -- There are three types of bikes - ok
 
 ### Create Queries 
 -- To make queries faster I divided the dataset into two parts 1)member data 2)casual data
 CREATE TABLE  member_data AS 
-SELECT * from prayag.combined_data where member_casual like  '%member%';
+SELECT * from bike_data.combined_data where member_casual like  '%member%';
 
 CREATE TABLE  casual_data AS 
-SELECT * from prayag.combined_data where member_casual like  '%casual%';
+SELECT * from bike_data.combined_data where member_casual like  '%casual%';
