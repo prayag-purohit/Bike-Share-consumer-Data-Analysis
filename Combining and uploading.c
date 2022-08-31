@@ -1,5 +1,5 @@
 ###Combining Files
-cd 'D:\Google Project\SourceFiles'
+cd 'D:/Google Project/SourceFiles'
 copy*.csv mergedfiles-CyclisticCaseStudy-2021.csv
 
 ###Uploading files to Mysql server
